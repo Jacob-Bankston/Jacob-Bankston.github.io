@@ -47,9 +47,6 @@ if (isset($_POST['message'])) {
 	$errorMSG .= 'Message is required';
 }
 
-// Current year
-$current_year = date ( 'Y' );
-
 // email template
 $body = "
 <html>
@@ -64,7 +61,6 @@ $body = "
             <div style='color:#8d99a7;padding-top:13px;border-top:1px solid #f3f5f6;'>Comment:</div>
             <div style='margin-bottom:10px;'>$message</div>
         </div>
-        <div style='color:#8d99a7; font-size:12px; text-align:center; padding-bottom:20px;'>Copyright $current_year vCard</div>
     </div>
 </body>
 </html>
@@ -74,8 +70,8 @@ $body = "
 $mail = new PHPMailer(true);
 
 //Recipients
-$mail->setFrom($email, $name);  // which email will be sent from
-$mail->addAddress('jacob.bankston.tech@gmail.com', 'Portfolio Website');  // who needs to send a letter
+$mail->setFrom('jacob.bankston.tech@gmail.com', 'Portfolio Mailer');  // which email will be sent from
+$mail->addAddress('jbank13enadiz@gmail.com', 'Portfolio Website');  // who needs to send a letter
 
 // Content
 $mail->CharSet = 'UTF-8';
