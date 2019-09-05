@@ -47,7 +47,7 @@ if (isset($_POST['message'])) {
 	$errorMSG .= 'Message is required';
 }
 
-// Curren year
+// Current year
 $current_year = date ( 'Y' );
 
 // email template
@@ -74,8 +74,8 @@ $body = "
 $mail = new PHPMailer(true);
 
 //Recipients
-$mail->setFrom('no-reply@mydomain.com', 'Company Name');  // which email will be sent from
-$mail->addAddress('example@mail.com', 'Company Name');  // who needs to send a letter
+$mail->setFrom($email, $name);  // which email will be sent from
+$mail->addAddress('jacob.bankston.tech@gmail.com', 'Portfolio Website');  // who needs to send a letter
 
 // Content
 $mail->CharSet = 'UTF-8';
