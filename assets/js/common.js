@@ -141,7 +141,7 @@ $(document).ready(function() {
 		        clickable: true
             },
 			autoplay: {
-                delay: 5000,
+                delay: 30000,
             },
 			breakpoints: {
                 991: {
